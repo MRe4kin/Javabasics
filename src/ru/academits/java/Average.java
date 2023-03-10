@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Average {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        double intirnalNumber, endingNumber, count = 0, sum = 0, average = 0, evenAverage = 0, sum1 = 0, count1 = 0;
+        double intirnalNumber, endingNumber, count = 0, sum = 0, average = 0, evenAverage = 0;
 
         System.out.print("Введите начальное число диапазона чисел: ");
         intirnalNumber = scan.nextDouble();
