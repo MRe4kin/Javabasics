@@ -7,6 +7,7 @@ public class Numbers {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите число:");
         int n = scan.nextInt();
+        n=Math.abs(n);
         int digitMax = digitMax(n);
         int summa = sum(n);
         int sumOdd = oddSum(n);
