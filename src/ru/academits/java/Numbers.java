@@ -12,7 +12,7 @@ public class Numbers {
         oddSum(n);
     }
 
-    public static void sum(int n) {
+    private static void sum(int n) {
         int sum = 0;
         while (n != 0) {
             sum += (n % 10);
@@ -21,7 +21,7 @@ public class Numbers {
         System.out.println(sum + " Сумма цифр");
     }
 
-    public static void oddSum(int n) {
+    private static void oddSum(int n) {
         int sumOdd = 0;
         while (n != 0) {
 
@@ -33,7 +33,7 @@ public class Numbers {
 
     }
 
-    public static void digitMax(int n) {
+    private static void digitMax(int n) {
         int maxDigit;
         maxDigit = (n % 10);
         while (n > 0) {

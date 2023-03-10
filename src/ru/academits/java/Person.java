@@ -4,9 +4,9 @@ public class Person {
     private String name;
     private String middleName;
     private String familyName;
-    private String age;
+    private int age;
     public static final int MIN_AGE = 15;
-    public static final int birthYear = 1989;
+    int birthYear = 0;
 
     public Person(String name, String middleName, String familyName) {
         this.name = name;
@@ -19,11 +19,12 @@ public class Person {
         return MIN_AGE;
     }
 
-    public static int getbirthYear() {
-        return birthYear;
+    public int getBirthYear() {
+        return birthYear = 2023 - age;
     }
 
     public String getName() {
+
         return name;
     }
 
@@ -56,11 +57,12 @@ public class Person {
         System.out.println("Фамилия измена");
     }
 
-    public String getAge() {
+    public int getAge() {
+
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
 
         System.out.println("Возраст изменен " + age);

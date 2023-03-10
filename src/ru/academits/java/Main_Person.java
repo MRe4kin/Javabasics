@@ -21,8 +21,8 @@ public class Main_Person {
         System.out.println("Имя изменано на : " + person.getName());
         System.out.println("Минимальный возраст: " + person.getMinAge());
         System.out.println(person);
-        person.setAge("33");
+        person.setAge(33);
         System.out.println("Возраст: " + person.getAge());
-        System.out.println("Год рождения: " + person.getbirthYear());
+        System.out.println("Год рождения: " + person.getBirthYear());
     }
 }

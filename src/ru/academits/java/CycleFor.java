@@ -10,7 +10,7 @@ public class CycleFor {
         }
     }
 
-    public static boolean multiplicity(int i) {
+    private static boolean multiplicity(int i) {
         return (i % 4) == 0;
     }
 }
