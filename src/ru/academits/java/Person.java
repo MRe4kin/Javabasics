@@ -1,12 +1,13 @@
 package ru.academits.java;
 
+import java.time.LocalDate;
+
 public class Person {
     private String name;
     private String middleName;
     private String familyName;
     private int age;
     public static final int MIN_AGE = 15;
-    int birthYear = 0;
 
     public Person(String name, String middleName, String familyName) {
         this.name = name;
@@ -20,7 +21,10 @@ public class Person {
     }
 
     public int getBirthYear() {
-        return birthYear = 2023 - age;
+        LocalDate currentDate = LocalDate.now();
+        int currentYear = currentDate.getYear();
+        int birthYear;
+        return birthYear = currentYear - age;
     }
 
     public String getName() {

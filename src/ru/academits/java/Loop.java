@@ -1,6 +1,6 @@
 package ru.academits.java;
 
-public class CycleFor {
+public class Loop {
     public static void main(String[] args) {
 
         for (int i = 100; i >= 1; i--) {
@@ -11,6 +11,6 @@ public class CycleFor {
     }
 
     private static boolean multiplicity(int i) {
-        return (i % 4) == 0;
+        return i % 4 == 0;
     }
 }

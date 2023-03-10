@@ -7,21 +7,24 @@ public class Numbers {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите число:");
         int n = scan.nextInt();
-        digitMax(n);
-        sum(n);
-        oddSum(n);
+        int digitMax = digitMax(n);
+        int summa = sum(n);
+        int sumOdd = oddSum(n);
+        System.out.println("Сумма  цифр: " + summa);
+        System.out.println("Сумма нечетных цифр: " + sumOdd);
+        System.out.println("Максимальное  число: " + digitMax);
     }
 
-    private static void sum(int n) {
-        int sum = 0;
+    private static int sum(int n) {
+        int summa = 0;
         while (n != 0) {
-            sum += (n % 10);
+            summa += (n % 10);
             n /= 10;
         }
-        System.out.println(sum + " Сумма цифр");
+        return summa;
     }
 
-    private static void oddSum(int n) {
+    private static int oddSum(int n) {
         int sumOdd = 0;
         while (n != 0) {
 
@@ -29,11 +32,11 @@ public class Numbers {
                 sumOdd += (n % 10);
             n /= 10;
         }
-        System.out.println("Сумма нечетных цифр: " + sumOdd);
+        return sumOdd;
 
     }
 
-    private static void digitMax(int n) {
+    private static int digitMax(int n) {
         int maxDigit;
         maxDigit = (n % 10);
         while (n > 0) {
@@ -42,7 +45,7 @@ public class Numbers {
                 maxDigit = curDigit;
             n /= 10;
         }
-        System.out.println("Максимальное  число: " + maxDigit);
+        return maxDigit;
 
     }
 
