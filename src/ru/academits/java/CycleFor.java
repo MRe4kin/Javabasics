@@ -4,8 +4,7 @@ public class CycleFor {
     public static void main(String[] args) {
 
         for (int i = 100; i >= 1; i--) {
-            boolean numbers = multiplicity(i);
-            if (numbers) {
+            if (multiplicity(i)) {
                 System.out.println("Число кратное 4: " + i);
             }
         }

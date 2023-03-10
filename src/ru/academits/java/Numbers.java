@@ -4,40 +4,46 @@ import java.util.Scanner;
 
 public class Numbers {
     public static void main(String[] args) {
-        String str;
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("Введите число:");
-        str = scanner.nextLine();
-        char[] numbers = str.toCharArray();
-        System.out.printf("Сумма цифр числа %s = %d%n", str, sumDigit(numbers));
-        System.out.printf("Сумма нечетных цифр числа %s = %d%n", str, sumOdd(numbers));
-        System.out.printf("Максимальная цифра числа %s = %s%n", str, maxDigit(numbers));
+        int n = scan.nextInt();
+        digitMax(n);
+        sum(n);
+        oddSum(n);
     }
 
-    private static int sumDigit(char[] arr) {
+    public static void sum(int n) {
         int sum = 0;
-        for (char c : arr) {
-            int value = Character.getNumericValue(c);
-            sum += value;
+        while (n != 0) {
+            sum += (n % 10);
+            n /= 10;
         }
-        return sum;
+        System.out.println(sum + " Сумма цифр");
     }
 
-    private static int sumOdd(char[] arr) {
-        int sum = 0;
-        for (char c : arr) {
-            int value = Character.getNumericValue(c);
-            if (value % 2 == 1)
-                sum += value;
+    public static void oddSum(int n) {
+        int sumOdd = 0;
+        while (n != 0) {
+
+            if ((n % 2) == 1)
+                sumOdd += (n % 10);
+            n /= 10;
         }
-        return sum;
+        System.out.println("Сумма нечетных цифр: " + sumOdd);
+
     }
 
-    private static char maxDigit(char[] arr) {
-        char max = arr[0];
-        for (char c : arr) {
-            if (c > max) max = c;
+    public static void digitMax(int n) {
+        int maxDigit;
+        maxDigit = (n % 10);
+        while (n > 0) {
+            int curDigit = (n % 10);
+            if (curDigit > maxDigit)
+                maxDigit = curDigit;
+            n /= 10;
         }
-        return max;
+        System.out.println("Максимальное  число: " + maxDigit);
+
     }
+
 }

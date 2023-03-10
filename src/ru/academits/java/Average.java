@@ -5,28 +5,39 @@ import java.util.Scanner;
 public class Average {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        double n, m, count = 0, sum = 0, average = 0;
+        double intirnalNumber, endingNumber, count = 0, sum = 0, average = 0, evenAverage = 0, sum1 = 0, count1 = 0;
 
         System.out.print("Введите начальное число диапазона чисел: ");
-        n = scan.nextDouble();
-        if (n < 1) {
+        intirnalNumber = scan.nextDouble();
+        if (intirnalNumber < 1) {
             do {
                 System.out.print("Введите число > 1: ");
-                n = scan.nextDouble();
+                intirnalNumber = scan.nextDouble();
             }
 
-            while (n < 1);
+            while (intirnalNumber < 1);
         }
         System.out.print("Введите конечное число диапазона чисел: ");
-        m = scan.nextDouble();
+        endingNumber = scan.nextDouble();
 
-        for (double i = n; i <= m; i++) {
+        for (double i = intirnalNumber; i <= endingNumber; i++) {
             count++;
             sum += i;
             average = sum / count;
 
         }
         System.out.println("Среднее арифметическое: " + average);
+        count = 0;
+        sum = 0;
+        for (double j = intirnalNumber; j <= endingNumber; j++) {
+            if ((j % 2) == 0) {
+                count++;
+                sum += j;
+                evenAverage = sum / count;
+            }
+
+        }
+        System.out.println("Среднее арифметическое четных чисел: " + evenAverage);
     }
 
 }
