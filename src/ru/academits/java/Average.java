@@ -6,7 +6,7 @@ public class Average {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int firstNumber, endingNumber, count = 0, sum = 0, evenSum = 0, evenCount = 0;
-        double average = 0, evenAverage = 0;
+        double average, evenAverage;
 
         System.out.print("Введите начальное число диапазона чисел: ");
         firstNumber = scan.nextInt();
@@ -24,15 +24,16 @@ public class Average {
         for (int j = firstNumber; j <= endingNumber; j++) {
             count++;
             sum += j;
-            average = sum / count;
             if ((j % 2) == 0) {
                 evenCount++;
                 evenSum += j;
-                evenAverage = evenSum / evenCount;
             }
 
 
         }
+
+        average = (double) sum / (double) count;
+        evenAverage = (double) evenSum / (double) evenCount;
         System.out.println("Среднее арифметическое: " + average);
         System.out.println("Среднее арифметическое четных чисел: " + evenAverage);
     }
