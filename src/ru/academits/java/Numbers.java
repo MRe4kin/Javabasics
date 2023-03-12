@@ -6,45 +6,45 @@ public class Numbers {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите число:");
-        int n = scan.nextInt();
-        n=Math.abs(n);
-        int digitMax = digitMax(n);
-        int summa = sum(n);
-        int sumOdd = oddSum(n);
-        System.out.println("Сумма  цифр: " + summa);
+        int digit = scan.nextInt();
+        digit = Math.abs(digit);
+        int digitMax = digitMax(digit);
+        int digitSum = sum(digit);
+        int sumOdd = oddSum(digit);
+        System.out.println("Сумма  цифр: " + digitSum);
         System.out.println("Сумма нечетных цифр: " + sumOdd);
         System.out.println("Максимальное  число: " + digitMax);
     }
 
-    private static int sum(int n) {
-        int summa = 0;
-        while (n != 0) {
-            summa += (n % 10);
-            n /= 10;
+    private static int sum(int digit) {
+        int digitSum = 0;
+        while (digit != 0) {
+            digitSum += (digit % 10);
+            digit /= 10;
         }
-        return summa;
+        return digitSum;
     }
 
-    private static int oddSum(int n) {
+    private static int oddSum(int digit) {
         int sumOdd = 0;
-        while (n != 0) {
+        while (digit != 0) {
 
-            if ((n % 2) == 1)
-                sumOdd += (n % 10);
-            n /= 10;
+            if ((digit % 2) == 1)
+                sumOdd += (digit % 10);
+            digit /= 10;
         }
         return sumOdd;
 
     }
 
-    private static int digitMax(int n) {
+    private static int digitMax(int digit) {
         int maxDigit;
-        maxDigit = (n % 10);
-        while (n > 0) {
-            int curDigit = (n % 10);
+        maxDigit = (digit % 10);
+        while (digit > 0) {
+            int curDigit = (digit % 10);
             if (curDigit > maxDigit)
                 maxDigit = curDigit;
-            n /= 10;
+            digit /= 10;
         }
         return maxDigit;
 

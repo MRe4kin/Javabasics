@@ -5,22 +5,23 @@ import java.util.Scanner;
 public class Average {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        double firstNumber, endingNumber, count = 0, sum = 0, average = 0, evenAverage = 0, evenSum = 0, evenCount = 0;
+        int firstNumber, endingNumber, count = 0, sum = 0, evenSum = 0, evenCount = 0;
+        double average = 0, evenAverage = 0;
 
         System.out.print("Введите начальное число диапазона чисел: ");
-        firstNumber = scan.nextDouble();
+        firstNumber = scan.nextInt();
         if (firstNumber < 1) {
             do {
                 System.out.print("Введите число > 1: ");
-                firstNumber = scan.nextDouble();
+                firstNumber = scan.nextInt();
             }
 
             while (firstNumber < 1);
         }
         System.out.print("Введите конечное число диапазона чисел: ");
-        endingNumber = scan.nextDouble();
+        endingNumber = scan.nextInt();
 
-        for (double j = firstNumber; j <= endingNumber; j++) {
+        for (int j = firstNumber; j <= endingNumber; j++) {
             count++;
             sum += j;
             average = sum / count;

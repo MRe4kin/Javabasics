@@ -23,8 +23,7 @@ public class Person {
     public int getBirthYear() {
         LocalDate currentDate = LocalDate.now();
         int currentYear = currentDate.getYear();
-        int birthYear;
-        return birthYear = currentYear - age;
+        return currentYear - age;
     }
 
     public String getName() {
